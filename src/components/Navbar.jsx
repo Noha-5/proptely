@@ -1,18 +1,31 @@
 import React from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import Submenu from "./nav/Submenu"
+import home from "/assets/images/nav/home.png"
+import stats from "/assets/images/nav/stats.png"
+import properties from "/assets/images/nav/properties.png"
+import contact from "/assets/images/nav/contact.png"
+import document from "/assets/images/nav/document.png"
+import facility from "/assets/images/nav/facility.png"
+import bank from "/assets/images/nav/bank.png"
+import shop from "/assets/images/nav/shop.png"
+import graph from "/assets/images/nav/graph.png"
+import report from "/assets/images/nav/report.png"
+import chat from "/assets/images/nav/chat.png"
+import note from "/assets/images/nav/note.png"
+import search from "/assets/images/nav/search.png"
 
 export default function Navbar() {
   // All menu links
   const menuLinks = [
     {
       name: "home",
-      imgName: "home",
+      imgName: home,
       heading: "home",
     },
     {
       name: "stats",
-      imgName: "stats",
+      imgName: stats,
       heading: "stats",
       links: [
         { name: "all", path: "all" },
@@ -25,7 +38,7 @@ export default function Navbar() {
     },
     {
       name: "properties",
-      imgName: "properties",
+      imgName: properties,
       heading: "portfolio",
       links: [
         { name: "properties", path: "index" },
@@ -35,52 +48,52 @@ export default function Navbar() {
     },
     {
       name: "contact",
-      imgName: "contact",
+      imgName: contact,
       heading: "contacts",
     },
     {
       name: "document",
-      imgName: "document",
+      imgName: document,
       heading: "documents",
     },
     {
       name: "facility",
-      imgName: "facility",
+      imgName: facility,
       heading: "facility",
     },
     {
       name: "bank",
-      imgName: "bank",
+      imgName: bank,
       heading: "bank",
     },
     {
       name: "shop",
-      imgName: "shop",
+      imgName: shop,
       heading: "shop",
     },
     {
       name: "graph",
-      imgName: "graph",
+      imgName: graph,
       heading: "graph",
     },
     {
       name: "report",
-      imgName: "report",
+      imgName: report,
       heading: "report",
     },
     {
       name: "chat",
-      imgName: "chat",
+      imgName: chat,
       heading: "chat",
     },
     {
       name: "note",
-      imgName: "note",
+      imgName: note,
       heading: "note",
     },
     {
       name: "search",
-      imgName: "search",
+      imgName: search,
       heading: "search",
     },
   ]
@@ -117,17 +130,11 @@ export default function Navbar() {
                 }}
                 to={`${link.name}/${link.links[0].path}`}
               >
-                <img
-                  src={`/images/nav/${link.imgName}.png`}
-                  alt={`${link.imgName} page`}
-                />
+                <img src={link.imgName} alt={`${link.imgName} page`} />
               </NavLink>
             ) : (
               <NavLink to={link.name}>
-                <img
-                  src={`/images/nav/${link.imgName}.png`}
-                  alt={`${link.imgName} page`}
-                />
+                <img src={link.imgName} alt={`${link.imgName} page`} />
               </NavLink>
             )}
 

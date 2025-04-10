@@ -2,6 +2,10 @@ import React from "react"
 import Search from "./header/Search"
 import UserProfile from "./header/UserProfile"
 import logo from "/assets/images/header/proptely-logo.png"
+import settings from "/assets/images/header/settings.png"
+import notification from "/assets/images/header/notification.png"
+import downArrow from "/assets/images/header/down-arrow.png"
+import logout from "/assets/images/header/logout.png"
 
 export default function Navbar() {
   const username = "Alex Johnson"
@@ -27,16 +31,12 @@ export default function Navbar() {
         {/* settings, notifications */}
         <div className="flex items-center justify-end border-x-0 md:border-x-[0.1px] md:border-[#282B2E] h-8 w-[30%] pe-[4%]">
           <button className="hidden md:block">
-            <img
-              className="min-w-[18px]"
-              src="/images/header/settings.png"
-              alt="settings icon"
-            />
+            <img className="min-w-[18px]" src={settings} alt="settings icon" />
           </button>
           <button className="ms-5">
             <img
               className="min-w-5 md:min-w-[18px]"
-              src="/images/header/notification.png"
+              src={notification}
               alt="notification icon"
             />
           </button>
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* mobile menu btn */}
         <div className="flex mx-2 md:hidden relative">
           <button className="w-5" onClick={toggleHeaderMobileMenu}>
-            <img src="/images/header/down-arrow.png" alt="header menu" />
+            <img src={downArrow} alt="header menu" />
           </button>
         </div>
       </section>
@@ -83,22 +83,14 @@ export default function Navbar() {
 
         {/* settings */}
         <button className="flex items-center gap-3 mt-4">
-          <img
-            className="min-w-4"
-            src="/images/header/settings.png"
-            alt="settings icon"
-          />
+          <img className="min-w-4" src={settings} alt="settings icon" />
           <span className="text-xs">Settings</span>
         </button>
 
         {/* Logout */}
         <hr className="mt-2 mb-2" />
         <button className="flex items-center gap-3 mt-4">
-          <img
-            className="w-5"
-            src="/images/header/logout.png"
-            alt="Logout icon"
-          />
+          <img className="w-5" src={logout} alt="Logout icon" />
           <span className="text-xs">Logout</span>
         </button>
       </section>

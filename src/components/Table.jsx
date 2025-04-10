@@ -1,4 +1,7 @@
 import React from "react"
+import sort from "/assets/images/icons/sort.png"
+import edit from "/assets/images/icons/edit.png"
+import eye from "/assets/images/icons/eye.png"
 
 export default function Table({ columns }) {
   const data = [
@@ -72,11 +75,7 @@ export default function Table({ columns }) {
                   {column}
                 </h6>
                 <button>
-                  <img
-                    className="max-w-4"
-                    src="/images/icons/sort.png"
-                    alt="sort icon"
-                  />
+                  <img className="max-w-4" src={sort} alt="sort icon" />
                 </button>
               </div>
             </th>
@@ -92,11 +91,7 @@ export default function Table({ columns }) {
                 Actions
               </h6>
               <button>
-                <img
-                  className="max-w-4"
-                  src="/images/icons/sort.png"
-                  alt="sort icon"
-                />
+                <img className="max-w-4" src={sort} alt="sort icon" />
               </button>
             </div>
           </th>
@@ -120,10 +115,10 @@ export default function Table({ columns }) {
             <td>{item.assignedTo}</td>
             <td className="text-center">
               <button>
-                <img src="/images/icons/edit.png" alt="edit icon" />
+                <img src={edit} alt="edit icon" />
               </button>
               <button>
-                <img src="/images/icons/eye.png" alt="visibility icon" />
+                <img src={eye} alt="visibility icon" />
               </button>
             </td>
           </tr>

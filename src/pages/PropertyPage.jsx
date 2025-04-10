@@ -2,6 +2,8 @@ import React from "react"
 import { Outlet } from "react-router-dom"
 import Search from "../components/header/Search"
 import Table from "../components/Table"
+import download from "/assets/images/icons/download.png"
+import filter from "/assets/images/icons/filter.png"
 
 export default function PropertyPage() {
   return (
@@ -11,7 +13,7 @@ export default function PropertyPage() {
         <h1 className="text-xl font-semibold">Properties</h1>
         <div className="flex items-center">
           <button className="px-2 py-2 bg-teal-450 rounded">
-            <img src="/images/icons/download.png" alt="download icon" />
+            <img src={download} alt="download icon" />
           </button>
           <button className="px-1 py-2 bg-blue-650 rounded text-white font-medium text-xs ms-1">
             Import Properties
@@ -47,11 +49,7 @@ export default function PropertyPage() {
             placeholderText="Search Properties"
           />
           <button className="bg-teal-450 px-2 py-2 rounded">
-            <img
-              className="min-w-[14px]"
-              src="/images/icons/filter.png"
-              alt="filter icon"
-            />
+            <img className="min-w-[14px]" src={filter} alt="filter icon" />
           </button>
           <button className="px-3 py-2 text-xs rounded-[3px] border border-[#E7F3F9]">
             Edit Column

@@ -13,7 +13,7 @@ import PropertyPage from "./pages/PropertyPage.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/proptely" element={<RootLayout />}>
       <Route path="stats" element={<App />}>
         <Route path="all" element={<h1>hi</h1>} />
       </Route>
