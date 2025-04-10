@@ -10,19 +10,23 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import RootLayout from "./layouts/RootLayout.jsx"
-import PropertyPage from "./pages/PropertyPage.jsx"
+import PropertyPage, { propertyLoader } from "./pages/PropertyPage.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/proptely" element={<RootLayout />}>
-      {/* <Route
+      <Route
         index
         element={<Navigate from="/proptely" to="/proptely/properties/index" />}
-      /> */}
+      />
       <Route path="stats" element={<App />}>
         <Route path="all" element={<h1>hi</h1>} />
       </Route>
-      <Route path="properties/index" element={<PropertyPage />} />
+      <Route
+        path="properties/index"
+        loader={propertyLoader}
+        element={<PropertyPage />}
+      />
       <Route path="*" element={<h1 className="text-xl">404 - Not Found</h1>} />
     </Route>
   )

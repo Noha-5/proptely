@@ -3,50 +3,7 @@ import sort from "/assets/images/icons/sort.png"
 import edit from "/assets/images/icons/edit.png"
 import eye from "/assets/images/icons/eye.png"
 
-export default function Table({ columns }) {
-  const data = [
-    {
-      id: 16281,
-      property: "UPRES31",
-      tags: "",
-      size: "1500.0",
-      units: "",
-      fees: "",
-      stage: "",
-      assignedTo: "mq ar, Mark Jason",
-    },
-    {
-      id: 16281,
-      property: "UPRES31",
-      tags: "",
-      size: "1500.0",
-      units: "",
-      fees: "",
-      stage: "",
-      assignedTo: "mq ar, Mark Jason",
-    },
-    {
-      id: 16281,
-      property: "UPRES31",
-      tags: "",
-      size: "1500.0",
-      units: "",
-      fees: "",
-      stage: "",
-      assignedTo: "mq ar, Mark Jason",
-    },
-    {
-      id: 16281,
-      property: "UPRES31",
-      tags: "",
-      size: "1500.0",
-      units: "",
-      fees: "",
-      stage: "",
-      assignedTo: "mq ar, Mark Jason",
-    },
-  ]
-
+export default function Table({ columns, data }) {
   return (
     <table className="w-full border-separate border-spacing-0 border border-[#B5DEF2] rounded-md  mt-7">
       {/* Table Headings */}
@@ -90,29 +47,37 @@ export default function Table({ columns }) {
 
       {/* Table Content */}
       <tbody className=" [&>*:nth-child(2n+1)]:bg-blue-450">
-        {data.map((item, index) => (
-          <tr
-            key={index}
-            className="[&>*:not(:last-child)]:border-r-2 [&>*:not(:last-child)]:border-[#B5DEF2]  [&>*]:text-[11px]  [&>*]:font-light [&>*]:p-2"
-          >
-            <td>{item.id}</td>
-            <td>{item.property}</td>
-            <td>{item.tags}</td>
-            <td>{item.size}</td>
-            <td>{item.units}</td>
-            <td>{item.fees}</td>
-            <td>{item.stage}</td>
-            <td>{item.assignedTo}</td>
-            <td className="text-center">
-              <button>
-                <img src={edit} alt="edit icon" />
-              </button>
-              <button>
-                <img src={eye} alt="visibility icon" />
-              </button>
+        {data ? (
+          data.map((item, index) => (
+            <tr
+              key={index}
+              className="[&>*:not(:last-child)]:border-r-2 [&>*:not(:last-child)]:border-[#B5DEF2]  [&>*]:text-[11px]  [&>*]:font-light [&>*]:p-2"
+            >
+              <td>{item.id}</td>
+              <td>{item.property}</td>
+              <td>{item.tags}</td>
+              <td>{item.size}</td>
+              <td>{item.units}</td>
+              <td>{item.fees}</td>
+              <td>{item.stage}</td>
+              <td>{item.assignedTo}</td>
+              <td className="text-center">
+                <button>
+                  <img src={edit} alt="edit icon" />
+                </button>
+                <button>
+                  <img src={eye} alt="visibility icon" />
+                </button>
+              </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan={100}>
+              <h3 className="text-center p-4">No Data Available</h3>
             </td>
           </tr>
-        ))}
+        )}
       </tbody>
     </table>
   )
