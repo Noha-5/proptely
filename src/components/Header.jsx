@@ -1,6 +1,7 @@
 import React from "react"
 import Search from "./header/Search"
 import UserProfile from "./header/UserProfile"
+import logo from "/assets/images/header/proptely-logo.png"
 
 export default function Navbar() {
   const username = "Alex Johnson"
@@ -16,7 +17,7 @@ export default function Navbar() {
     <header className="flex justify-between md:justify-evenly items-center px-8 bg-blue-450">
       {/* logo */}
       <div>
-        <img src="/images/header/proptely-logo.png" alt="Proptely Logo" />
+        <img src={logo} alt="Proptely Logo" />
       </div>
 
       {/* search */}
