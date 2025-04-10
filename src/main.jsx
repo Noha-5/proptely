@@ -5,6 +5,7 @@ import App from "./App.jsx"
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom"
@@ -14,6 +15,10 @@ import PropertyPage from "./pages/PropertyPage.jsx"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/proptely" element={<RootLayout />}>
+      {/* <Route
+        index
+        element={<Navigate from="/proptely" to="/proptely/properties/index" />}
+      /> */}
       <Route path="stats" element={<App />}>
         <Route path="all" element={<h1>hi</h1>} />
       </Route>

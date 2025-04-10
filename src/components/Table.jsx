@@ -45,16 +45,6 @@ export default function Table({ columns }) {
       stage: "",
       assignedTo: "mq ar, Mark Jason",
     },
-    {
-      id: 16281,
-      property: "UPRES31",
-      tags: "",
-      size: "1500.0",
-      units: "",
-      fees: "",
-      stage: "",
-      assignedTo: "mq ar, Mark Jason",
-    },
   ]
 
   return (
