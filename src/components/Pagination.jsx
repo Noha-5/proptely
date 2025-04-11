@@ -4,6 +4,7 @@ import Table from "../components/Table"
 // icons
 import previous from "/assets/images/icons/chevron_left.png"
 import next from "/assets/images/icons/chevron_right.png"
+import ProgressBar from "./ProgressBar"
 
 export default function Pagination({ columns, data }) {
   const [currentPage, setCurrentPage] = useState(1)
@@ -65,6 +66,11 @@ export default function Pagination({ columns, data }) {
     <>
       {/* Table component */}
       <Table columns={columns} data={data} currentRows={currentRows} />
+
+      {/* Progress bar */}
+      <ProgressBar
+        progress={((currentRows.length + indexOfFirstRow) / totalRows) * 100}
+      />
 
       {/* Pagination */}
       <section className="flex flex-wrap gap-y-3 gap-x-[10%] md:gap-[20%] items-center mt-5 mb-14">
