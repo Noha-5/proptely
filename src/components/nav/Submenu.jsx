@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 
 export default function Submenu({ show, heading, links, parentPath }) {
   return (
+    // stop event propagation so the menu doesn't close when child links are clicked. Only toggle when parent menu is clicked
     <section
       onClick={(e) => e.stopPropagation()}
       className={`${
@@ -19,7 +20,12 @@ export default function Submenu({ show, heading, links, parentPath }) {
               className="[&>*]:block [&>*]:px-7 [&>*]:py-1 [&>*.active]:bg-blue-450 [&>*.active]:font-medium [&>*]:capitalize [&>*]:text-sm"
               key={index}
             >
-              <NavLink to={`${parentPath}/${link.path}`}>{link.name}</NavLink>
+              <NavLink
+                aria-label={`${link.name} page`}
+                to={`${parentPath}/${link.path}`}
+              >
+                {link.name}
+              </NavLink>
             </li>
           ))}
       </ul>

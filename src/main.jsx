@@ -1,7 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 
-import App from "./App.jsx"
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -19,15 +18,22 @@ const router = createBrowserRouter(
         index
         element={<Navigate from="/proptely" to="/proptely/properties/index" />}
       />
-      <Route path="stats" element={<App />}>
-        <Route path="all" element={<h1>hi</h1>} />
+      <Route path="stats" element={<h1>Stats page</h1>}>
+        <Route path="all" element={<h1>ALL stats</h1>} />
       </Route>
       <Route
         path="properties/index"
         loader={propertyLoader}
         element={<PropertyPage />}
       />
-      <Route path="*" element={<h1 className="text-xl">404 - Not Found</h1>} />
+      <Route
+        path="*"
+        element={
+          <div className="h-[50%] flex justify-center items-center">
+            <h1 className="text-2xl">404 - Not Found</h1>
+          </div>
+        }
+      />
     </Route>
   )
 )

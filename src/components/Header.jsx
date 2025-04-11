@@ -28,12 +28,13 @@ export default function Navbar() {
       <Search styles="hidden md:flex w-1/3 ms-auto" />
 
       <section className="flex w-1/2 justify-end">
-        {/* settings, notifications */}
         <div className="flex items-center justify-end border-x-0 md:border-x-[0.1px] md:border-[#282B2E] h-8 w-[30%] pe-[4%]">
-          <button className="hidden md:block">
+          {/* settings */}
+          <button aria-label="settings menu" className="hidden md:block">
             <img className="min-w-[18px]" src={settings} alt="settings icon" />
           </button>
-          <button className="ms-5">
+          {/* notification */}
+          <button aria-label="notification menu" className="ms-5">
             <img
               className="min-w-5 md:min-w-[18px]"
               src={notification}
@@ -55,7 +56,11 @@ export default function Navbar() {
 
         {/* mobile menu btn */}
         <div className="flex mx-2 md:hidden relative">
-          <button className="w-5" onClick={toggleHeaderMobileMenu}>
+          <button
+            aria-label="mobile header menu"
+            className="w-5"
+            onClick={toggleHeaderMobileMenu}
+          >
             <img src={downArrow} alt="header menu" />
           </button>
         </div>
@@ -82,14 +87,17 @@ export default function Navbar() {
         <Search styles="flex mt-4" />
 
         {/* settings */}
-        <button className="flex items-center gap-3 mt-4">
+        <button
+          aria-label="settings menu"
+          className="flex items-center gap-3 mt-4"
+        >
           <img className="min-w-4" src={settings} alt="settings icon" />
           <span className="text-xs">Settings</span>
         </button>
 
         {/* Logout */}
         <hr className="mt-2 mb-2" />
-        <button className="flex items-center gap-3 mt-4">
+        <button aria-label="logout" className="flex items-center gap-3 mt-4">
           <img className="w-5" src={logout} alt="Logout icon" />
           <span className="text-xs">Logout</span>
         </button>

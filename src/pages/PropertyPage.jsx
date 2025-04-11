@@ -1,9 +1,10 @@
 import React from "react"
-import { Outlet, useLoaderData } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
 import Search from "../components/header/Search"
-import Table from "../components/Table"
+// icons
 import download from "/assets/images/icons/download.png"
 import filter from "/assets/images/icons/filter.png"
+import Pagination from "../components/Pagination"
 
 export default function PropertyPage() {
   const propertyData = useLoaderData()
@@ -26,21 +27,23 @@ export default function PropertyPage() {
         </div>
       </section>
 
-      {/* tab & filter section */}
-      <section className="flex flex-wrap items-center justify-between mt-16 ">
+      {/* tabs & filter section */}
+      <section className="flex flex-wrap items-center justify-between mt-16 gap-y-5">
         {/* tabs */}
-        <ul className="flex flex-wrap items-center gap-5 [&>*>button]:text-xs">
+        <ul className="flex flex-wrap items-center gap-x-5 [&>*>button]:text-xs">
           <li>
-            <button className="text-blue-650 font-semibold">All</button>
+            <button aria-label="All" className="text-blue-650 font-semibold">
+              All
+            </button>
           </li>
           <li>
-            <button>Residential</button>
+            <button aria-label="residential">Residential</button>
           </li>
           <li>
-            <button>Commercial</button>
+            <button aria-label="commercial">Commercial</button>
           </li>
           <li>
-            <button>Co Living</button>
+            <button aria-label="co-living">Co Living</button>
           </li>
         </ul>
 
@@ -50,21 +53,27 @@ export default function PropertyPage() {
             styles="flex border border-[#EFF5F8] [&>input]:py-1"
             placeholderText="Search Properties"
           />
-          <button className="bg-teal-450 px-2 py-2 rounded">
+          <button aria-label="filter" className="bg-teal-450 px-2 py-2 rounded">
             <img className="min-w-[14px]" src={filter} alt="filter icon" />
           </button>
-          <button className="px-3 py-2 text-xs rounded-[3px] border border-[#E7F3F9]">
+          <button
+            aria-label="edit"
+            className="px-3 py-2 text-xs rounded-[3px] border border-[#E7F3F9]"
+          >
             Edit Column
           </button>
-          <button className="px-3 py-2 text-xs rounded-[3px] border border-[#E7F3F9]">
+          <button
+            aria-label="clear"
+            className="px-3 py-2 text-xs rounded-[3px] border border-[#E7F3F9]"
+          >
             Clear
           </button>
         </div>
       </section>
 
-      {/* Table  */}
+      {/* Table  in pagination */}
       <div className=" overflow-x-auto">
-        <Table
+        <Pagination
           data={propertyData?.properties}
           columns={[
             "ID",

@@ -4,7 +4,7 @@ import profile from "/assets/images/header/profile.png"
 export default function UserProfile({ styles, username, role }) {
   return (
     <div className={`${styles.container} items-center`}>
-      <button className={`${styles.btn}`}>
+      <button aria-label="user profile" className={`${styles.btn}`}>
         <img src={profile} alt="user profile icon" />
       </button>
       <div>

@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import Submenu from "./nav/Submenu"
+// All menu images
 import home from "/assets/images/nav/home.png"
 import stats from "/assets/images/nav/stats.png"
 import properties from "/assets/images/nav/properties.png"
@@ -102,13 +103,12 @@ export default function Navbar() {
   const [showSubmenu, setShowSubmenu] = React.useState(null)
   function toggleSubmenu(e, index) {
     setShowSubmenu((oldIndex) => (oldIndex === index ? null : index))
-    console.log("clicked")
   }
 
   return (
-    <nav className="h-full ms-[14px] flex w-full">
+    <nav aria-label="main navigation" className="h-full ms-[14px] flex w-full">
       <ul
-        className={`bg-blue-450  pt-16 pb-24 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>a]:px-5 [&>*>a]:py-[2.25px] [&>*>a]:block [&>*>a.active]:bg-[#B5DEF2] [&>*>a]:w-full [&>*>a]:rounded-sm [&>*>a>img]:min-w-4 ${
+        className={`bg-blue-450  pt-16 pb-24 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>a]:px-1 md:[&>*>a]:px-5 [&>*>a]:py-[2.25px] [&>*>a]:block [&>*>a.active]:bg-[#B5DEF2] [&>*>a]:w-full [&>*>a]:rounded-sm [&>*>a>img]:min-w-4 ${
           showSubmenu ? "md:me-40" : "me-0"
         }`}
       >
@@ -120,11 +120,13 @@ export default function Navbar() {
           >
             {/* Display the first submenu link as the first page that opens on clickling the parent menu */}
             {link.links && link.links[0] ? (
-              // Making sure the parent menu has active class when one of submenu link is clicked
               <NavLink
+                aria-label={`${link.name} page`}
                 className={() => {
+                  // Checking the url to make sure the parent menu has active class when one of submenu link is clicked
                   const { pathname } = useLocation()
-                  return pathname.split("/")[1].startsWith(link.name)
+                  // 2 because the first part of url is the base i.e properties in this url 'noha.github.io/proptely/properties/index' is indexed at 2
+                  return pathname.split("/")[2].startsWith(link.name)
                     ? "active"
                     : ""
                 }}
@@ -133,7 +135,7 @@ export default function Navbar() {
                 <img src={link.imgName} alt={`${link.imgName} page`} />
               </NavLink>
             ) : (
-              <NavLink to={link.name}>
+              <NavLink aria-label={`${link.name} page`} to={link.name}>
                 <img src={link.imgName} alt={`${link.imgName} page`} />
               </NavLink>
             )}
@@ -141,6 +143,7 @@ export default function Navbar() {
             {/* Submenu */}
             {link.links && (
               <Submenu
+                araia-label={`${link.name} submenu`}
                 show={showSubmenu === index ? true : false}
                 heading={link.heading}
                 links={link.links}
