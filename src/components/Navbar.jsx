@@ -126,7 +126,7 @@ export default function Navbar() {
                   // Checking the url to make sure the parent menu has active class when one of submenu link is clicked
                   const { pathname } = useLocation()
                   // 2 because the first part of url is the base i.e properties in this url 'noha.github.io/proptely/properties/index' is indexed at 2
-                  return pathname.split("/")[2].startsWith(link.name)
+                  return pathname.split("/")[2]?.startsWith(link.name)
                     ? "active"
                     : ""
                 }}
