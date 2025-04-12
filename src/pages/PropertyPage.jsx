@@ -72,21 +72,20 @@ export default function PropertyPage() {
       </section>
 
       {/* Table  in pagination */}
-      <div className=" overflow-x-auto">
-        <Pagination
-          data={propertyData?.properties}
-          columns={[
-            "ID",
-            "Property",
-            "Tags",
-            "Size",
-            "No of Units",
-            "Mangament Fees",
-            "Stage",
-            "Assigned To",
-          ]}
-        />
-      </div>
+
+      <Pagination
+        data={propertyData?.properties}
+        columns={[
+          "ID",
+          "Property",
+          "Tags",
+          "Size",
+          "No of Units",
+          "Mangament Fees",
+          "Stage",
+          "Assigned To",
+        ]}
+      />
     </>
   )
 }

@@ -5,7 +5,7 @@ import edit from "/assets/images/icons/edit.png"
 import eye from "/assets/images/icons/eye.png"
 export default function Table({ columns, data, currentRows }) {
   return (
-    <>
+    <div className=" overflow-x-auto">
       <table className="w-full border-separate border-spacing-0 border border-[#B5DEF2] rounded-md  mt-7">
         {/* Table Headings */}
         <thead>
@@ -81,6 +81,6 @@ export default function Table({ columns, data, currentRows }) {
           )}
         </tbody>
       </table>
-    </>
+    </div>
   )
 }

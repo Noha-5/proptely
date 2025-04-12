@@ -10,7 +10,7 @@ export default function Pagination({ columns, data }) {
   const [currentPage, setCurrentPage] = useState(1)
   const totalRows = data.length || 0 // Total number of rows
   const [rowsPerPage, setRowsPerPage] = useState(10) // Number of rows per page
-  const [pageCount, setPageCount] = useState(0) // Total number of pages
+  const [pageCount, setPageCount] = useState(1) // Total number of pages
 
   const indexOfLastRow = currentPage * rowsPerPage
   const indexOfFirstRow = indexOfLastRow - rowsPerPage
@@ -19,7 +19,6 @@ export default function Pagination({ columns, data }) {
   // rows per page handler
   function handleRowsPerPage(e) {
     setCurrentPage(1)
-    console.log("current page", currentPage, "page count", pageCount)
     setRowsPerPage(parseInt(e.target.value))
   }
 
@@ -101,7 +100,7 @@ export default function Pagination({ columns, data }) {
           nextLabel={nextBtn}
           breakLabel={null}
           pageCount={pageCount} // Total number of pages
-          forcePage={currentPage - 1} // Current page
+          forcePage={currentPage - 1}
           marginPagesDisplayed={1} // How many pages to show at the beginning and end
           pageRangeDisplayed={3} // How many pages to show around the current page
           onPageChange={handlePageClick} // What happens when a page is clicked

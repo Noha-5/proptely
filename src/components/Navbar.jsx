@@ -1,5 +1,5 @@
-import React from "react"
-import { NavLink, useLocation } from "react-router-dom"
+import React, { useEffect } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 import Submenu from "./nav/Submenu"
 // All menu images
 import home from "/assets/images/nav/home.png"
@@ -38,11 +38,11 @@ export default function Navbar() {
       ],
     },
     {
-      name: "properties",
+      name: "portfolio",
       imgName: properties,
       heading: "portfolio",
       links: [
-        { name: "properties", path: "index" },
+        { name: "properties", path: "properties" },
         { name: "units", path: "units" },
         { name: "parkings", path: "parkings" },
       ],
@@ -99,16 +99,28 @@ export default function Navbar() {
     },
   ]
 
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const [activeMenu, setActiveMenu] = React.useState(0)
   // toggle submenu
   const [showSubmenu, setShowSubmenu] = React.useState(null)
   function toggleSubmenu(e, index) {
     setShowSubmenu((oldIndex) => (oldIndex === index ? null : index))
   }
 
+  // sets active menu according to current url
+  useEffect(() => {
+    const path = location.pathname.split("/")[2]
+    const index = menuLinks.findIndex((link) => link.name === path)
+
+    setActiveMenu(index)
+  }, [location])
+
   return (
     <nav aria-label="main navigation" className="h-full ms-[14px] flex w-full">
       <ul
-        className={`bg-blue-450  pt-16 pb-24 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>a]:px-1 md:[&>*>a]:px-5 [&>*>a]:py-[2.25px] [&>*>a]:block [&>*>a.active]:bg-[#B5DEF2] [&>*>a]:w-full [&>*>a]:rounded-sm [&>*>a>img]:min-w-4 ${
+        className={`bg-blue-450  pt-16 pb-24 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>button]:px-1 md:[&>*>button]:px-5 [&>*>button]:py-[2.25px] [&>*>button]:block [&>*>button.active]:bg-[#B5DEF2] [&>*>button]:w-full [&>*>button]:rounded-sm [&>*>button>img]:min-w-4 ${
           showSubmenu ? "md:me-40" : "me-0"
         }`}
       >
@@ -118,26 +130,23 @@ export default function Navbar() {
             className="relative md:flex md:items-center"
             onClick={(e) => toggleSubmenu(e, index)}
           >
-            {/* Display the first submenu link as the first page that opens on clickling the parent menu */}
-            {link.links && link.links[0] ? (
-              <NavLink
+            {link.links ? (
+              <button
                 aria-label={`${link.name} page`}
-                className={() => {
-                  // Checking the url to make sure the parent menu has active class when one of submenu link is clicked
-                  const { pathname } = useLocation()
-                  // 2 because the first part of url is the base i.e properties in this url 'noha.github.io/proptely/properties/index' is indexed at 2
-                  return pathname.split("/")[2]?.startsWith(link.name)
-                    ? "active"
-                    : ""
-                }}
-                to={`${link.name}/${link.links[0].path}`}
+                className={`${activeMenu === index ? "active" : ""}`}
               >
                 <img src={link.imgName} alt={`${link.imgName} page`} />
-              </NavLink>
+              </button>
             ) : (
-              <NavLink aria-label={`${link.name} page`} to={link.name}>
+              <button
+                aria-label={`${link.name} page`}
+                onClick={() => {
+                  navigate(`${link.name}`)
+                }}
+                className={`${activeMenu === index ? "active" : ""}`}
+              >
                 <img src={link.imgName} alt={`${link.imgName} page`} />
-              </NavLink>
+              </button>
             )}
 
             {/* Submenu */}

@@ -14,18 +14,24 @@ import PropertyPage, { propertyLoader } from "./pages/PropertyPage.jsx"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/proptely" element={<RootLayout />}>
-      <Route
-        index
-        element={<Navigate from="/proptely" to="/proptely/properties/index" />}
-      />
-      <Route path="stats" element={<h1>Stats page</h1>}>
+      <Route index element={<Navigate to="portfolio" />} />
+      <Route path="stats">
+        <Route index element={<Navigate to="all" />} />
         <Route path="all" element={<h1>ALL stats</h1>} />
       </Route>
-      <Route
-        path="properties/index"
-        loader={propertyLoader}
-        element={<PropertyPage />}
-      />
+      <Route path="portfolio">
+        <Route index element={<Navigate to="properties" />} />
+        <Route
+          path="properties"
+          loader={propertyLoader}
+          element={<PropertyPage />}
+          hydrateFallbackElement={
+            <div className="h-[50%] flex justify-center items-center">
+              <h1 className="text-2xl">Loading Data...</h1>
+            </div>
+          }
+        />
+      </Route>
       <Route
         path="*"
         element={
