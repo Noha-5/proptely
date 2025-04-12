@@ -1,0 +1,24 @@
+{
+  "companyNumbers": [
+    {
+      "name": "managed units",
+      "number": "10K",
+      "profit": "8"
+    },
+    {
+      "name": "owners in portfolio",
+      "number": "10K",
+      "profit": "5"
+    },
+    {
+      "name": "tenants in portfolio",
+      "number": "10K",
+      "profit": "8"
+    },
+    {
+      "name": "total active contracts",
+      "number": "300,000",
+      "profit": "5"
+    }
+  ]
+}

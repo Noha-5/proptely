@@ -10,6 +10,9 @@ import {
 } from "react-router-dom"
 import RootLayout from "./layouts/RootLayout.jsx"
 import PropertyPage, { propertyLoader } from "./pages/PropertyPage.jsx"
+import FinancialStatsPage, {
+  financialStatsLoader,
+} from "./pages/FinancialStatsPage.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +21,11 @@ const router = createBrowserRouter(
       <Route path="stats">
         <Route index element={<Navigate to="all" />} />
         <Route path="all" element={<h1>ALL stats</h1>} />
+        <Route
+          path="financial"
+          element={<FinancialStatsPage />}
+          loader={financialStatsLoader}
+        />
       </Route>
       <Route path="portfolio">
         <Route index element={<Navigate to="properties" />} />
@@ -27,7 +35,6 @@ const router = createBrowserRouter(
           element={<PropertyPage />}
           hydrateFallbackElement={
             <div className="w-full h-[100vh] flex justify-center items-center">
-              {console.log("loading in hydrate")}
               <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-900"></div>
               <h1 className="ms-1 text-2xl">Loading Data...</h1>
             </div>

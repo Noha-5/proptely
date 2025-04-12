@@ -93,7 +93,6 @@ export default function PropertyPage() {
 // Property Loader function
 export const propertyLoader = async () => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
     const response = await fetch(
       "https://noha-5.github.io/proptely/data/property.json"
     )

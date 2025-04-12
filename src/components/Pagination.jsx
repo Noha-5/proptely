@@ -80,6 +80,7 @@ export default function Pagination({ columns, data }) {
             className="flextext-[10px] rounded p-2 me-[10px] border border-[#EFF5F8] text-xs"
             name="rowsPerPage"
             id="rowsPerPage"
+            value={rowsPerPage}
             onChange={(e) => handleRowsPerPage(e)}
           >
             <option value="10">10</option>

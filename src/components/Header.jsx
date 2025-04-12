@@ -8,7 +8,7 @@ import downArrow from "/assets/images/header/down-arrow.png"
 import logout from "/assets/images/header/logout.png"
 
 export default function Navbar() {
-  const username = "Alex Johnson"
+  const username = "Alex Jonhson"
   const role = "Admin"
 
   const [showHeaderMobileMenu, setShowHeaderMobileMenu] = React.useState(false)
