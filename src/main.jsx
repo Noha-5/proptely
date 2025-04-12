@@ -26,8 +26,10 @@ const router = createBrowserRouter(
           loader={propertyLoader}
           element={<PropertyPage />}
           hydrateFallbackElement={
-            <div className="h-[50%] flex justify-center items-center">
-              <h1 className="text-2xl">Loading Data...</h1>
+            <div className="w-full h-[100vh] flex justify-center items-center">
+              {console.log("loading in hydrate")}
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-900"></div>
+              <h1 className="ms-1 text-2xl">Loading Data...</h1>
             </div>
           }
         />
