@@ -9,14 +9,14 @@ import { useLoaderData } from "react-router-dom"
 export default function FinancialStatsPage() {
   const data = useLoaderData()
   const companyNumbers = data?.companyNumbers
-  // const OwnersPortfolio = data?.ownersPortfolio
-  // const OwnersPortfolio = data?.companyPortfolio
-  // if (!data || !companyNumbers || !ownersPortfolio || !companyPortfolio)
-  //   return (
-  //     <h1 className="text-2xl text-center mt-8">
-  //       Data not available - Error fetching data
-  //     </h1>
-  //   )
+  const OwnersPortfolio = data?.ownersPortfolio
+  const companyPortfolio = data?.companyPortfolio
+  if (!data || !companyNumbers || !ownersPortfolio || !companyPortfolio)
+    return (
+      <h1 className="text-2xl text-center mt-8">
+        Data not available - Error fetching data
+      </h1>
+    )
 
   return (
     <>
@@ -46,14 +46,14 @@ export default function FinancialStatsPage() {
 
       {/* Charts */}
       <StackedBarLineChart
-        // data={ownersPortfolio}
+        data={ownersPortfolio}
         mainHeading={"Property (Owners) Portfolio"}
         subHeading={"Owners PnL (EBITA)"}
         graphTimeline={"Jan 24- Dec 24"}
       />
 
       <StackedBarLineChart
-        // data={companyPortfolio}
+        data={companyPortfolio}
         mainHeading={"Company Portfolio"}
         subHeading={"Company PnL (EBITA)"}
         graphTimeline={"Jan 24- Dec 24"}
