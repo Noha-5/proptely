@@ -20,5 +20,155 @@
       "number": "300,000",
       "profit": "5"
     }
+  ],
+
+  "ownersPortfolio": [
+    {
+      "name": "Jan",
+      "net": 400000,
+      "expense": 400000,
+      "income": 500000
+    },
+    {
+      "name": "Feb",
+      "net": 200000,
+      "expense": 200000,
+      "income": 500000
+    },
+    {
+      "name": "Mar",
+      "net": 130097,
+      "expense": 130098,
+      "income": 400089
+    },
+    {
+      "name": "Apr",
+      "net": 348000,
+      "expense": 342000,
+      "income": 522008
+    },
+    {
+      "name": "May",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    },
+    {
+      "name": "June",
+      "net": 389800,
+      "expense": 389800,
+      "income": 210000
+    },
+    {
+      "name": "July",
+      "net": 300200,
+      "expense": 100200,
+      "income": 210000
+    },
+    {
+      "name": "Aug",
+      "net": 100200,
+      "expense": 100200,
+      "income": 400000
+    },
+    {
+      "name": "Sept",
+      "net": 348000,
+      "expense": 342000,
+      "income": 522008
+    },
+    {
+      "name": "Oct",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    },
+    {
+      "name": "Nov",
+      "net": 200000,
+      "expense": 200000,
+      "income": 500000
+    },
+    {
+      "name": "Dec",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    }
+  ],
+
+  "companyPortfolio": [
+    {
+      "name": "Jan",
+      "net": 400000,
+      "expense": 400000,
+      "income": 500000
+    },
+    {
+      "name": "Feb",
+      "net": 200000,
+      "expense": 200000,
+      "income": 500000
+    },
+    {
+      "name": "Mar",
+      "net": 130097,
+      "expense": 130098,
+      "income": 400089
+    },
+    {
+      "name": "Apr",
+      "net": 348000,
+      "expense": 342000,
+      "income": 522008
+    },
+    {
+      "name": "May",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    },
+    {
+      "name": "June",
+      "net": 389800,
+      "expense": 389800,
+      "income": 210000
+    },
+    {
+      "name": "July",
+      "net": 300200,
+      "expense": 100200,
+      "income": 210000
+    },
+    {
+      "name": "Aug",
+      "net": 100200,
+      "expense": 100200,
+      "income": 400000
+    },
+    {
+      "name": "Sept",
+      "net": 348000,
+      "expense": 342000,
+      "income": 522008
+    },
+    {
+      "name": "Oct",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    },
+    {
+      "name": "Nov",
+      "net": 200000,
+      "expense": 200000,
+      "income": 500000
+    },
+    {
+      "name": "Dec",
+      "net": 300200,
+      "expense": 300200,
+      "income": 210000
+    }
   ]
 }
