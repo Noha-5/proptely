@@ -3,17 +3,20 @@ import React from "react"
 import calendar from "/assets/images/icons/calendar.png"
 import filter from "/assets/images/icons/filter.png"
 import NumberSummary from "../components/stats/NumberSummary"
+import StackedBarLineChart from "../components/stats/StackedBarLineChart"
 import { useLoaderData } from "react-router-dom"
 
 export default function FinancialStatsPage() {
   const data = useLoaderData()
   const companyNumbers = data?.companyNumbers
-  if (!data || !companyNumbers)
-    return (
-      <h1 className="text-2xl text-center mt-8">
-        Data not available - Error fetching data
-      </h1>
-    )
+  // const OwnersPortfolio = data?.ownersPortfolio
+  // const OwnersPortfolio = data?.companyPortfolio
+  // if (!data || !companyNumbers || !ownersPortfolio || !companyPortfolio)
+  //   return (
+  //     <h1 className="text-2xl text-center mt-8">
+  //       Data not available - Error fetching data
+  //     </h1>
+  //   )
 
   return (
     <>
@@ -39,6 +42,21 @@ export default function FinancialStatsPage() {
       <NumberSummary
         heading="Company Portflio Size"
         companyNumbers={companyNumbers}
+      />
+
+      {/* Charts */}
+      <StackedBarLineChart
+        // data={ownersPortfolio}
+        mainHeading={"Property (Owners) Portfolio"}
+        subHeading={"Owners PnL (EBITA)"}
+        graphTimeline={"Jan 24- Dec 24"}
+      />
+
+      <StackedBarLineChart
+        // data={companyPortfolio}
+        mainHeading={"Company Portfolio"}
+        subHeading={"Company PnL (EBITA)"}
+        graphTimeline={"Jan 24- Dec 24"}
       />
     </>
   )

@@ -19,7 +19,9 @@ export default function NumberSummary({ heading, companyNumbers }) {
             >
               <img className="min-w-9 mb-3" src={icons[index]} alt="icon" />
               <h4 className="text-2xl font-semibold">{number.number}</h4>
-              <h3 className="text-base font-medium">{number.name}</h3>
+              <h3 className="text-base capitalize font-medium">
+                {number.name}
+              </h3>
               <p className="text-xs font-medium text-[#0059FF]">
                 +{number.profit}% from yesterday
               </p>

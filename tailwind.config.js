@@ -24,7 +24,10 @@ export default {
       transitionTimingFunction: {
         slide: "cubic-bezier(.75,0,.175,1)",
       },
+      boxShadow: {
+        "graph-card": "4px 4px 4px 0 #051C3F1F",
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 }
