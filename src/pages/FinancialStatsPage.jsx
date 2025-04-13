@@ -9,7 +9,7 @@ import { useLoaderData } from "react-router-dom"
 export default function FinancialStatsPage() {
   const data = useLoaderData()
   const companyNumbers = data?.companyNumbers
-  const OwnersPortfolio = data?.ownersPortfolio
+  const ownersPortfolio = data?.ownersPortfolio
   const companyPortfolio = data?.companyPortfolio
   if (!data || !companyNumbers || !ownersPortfolio || !companyPortfolio)
     return (
