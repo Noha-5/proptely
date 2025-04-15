@@ -119,8 +119,8 @@ export default function OverviewPage() {
           <h3 className="text-xs font-medium mt-8">Owner Commission</h3>
           <Table
             columns={tenatCommissionColumns}
-            data={data.tenatCommission}
-            currentRows={data.tenatCommission}
+            data={data.tenantCommission}
+            currentRows={data.tenantCommission}
             customColumn={statusStyled}
             customColumnName="status"
             customColumnIndex={3}
