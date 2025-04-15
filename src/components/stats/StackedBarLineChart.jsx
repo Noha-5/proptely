@@ -99,7 +99,7 @@ export default function StackedBarLineChart({
             />
             <Line
               name="Net Profit"
-              type="monotone"
+              type="linear"
               dataKey="net"
               stroke="#83CFFF"
             />

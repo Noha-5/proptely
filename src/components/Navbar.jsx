@@ -118,9 +118,9 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <nav aria-label="main navigation" className="h-full ms-[14px] flex w-full">
+    <nav aria-label="main navigation" className="ms-[14px] flex w-full">
       <ul
-        className={`bg-blue-450  pt-16 pb-24 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>button]:px-1 md:[&>*>button]:px-5 [&>*>button]:py-[2.25px] [&>*>button]:block [&>*>button.active]:bg-[#B5DEF2] [&>*>button]:w-full [&>*>button]:rounded-sm [&>*>button>img]:min-w-4 ${
+        className={`bg-blue-450 pt-20 pb-28 ps-2 pe-[6px] mt-5 mb-5 rounded-2xl [&>*]:mb-6 [&>*>button]:px-1 md:[&>*>button]:px-5 [&>*>button]:py-[2.25px] [&>*>button]:block [&>*>button.active]:bg-[#B5DEF2] [&>*>button]:w-full [&>*>button]:rounded-sm [&>*>button>img]:min-w-4 ${
           showSubmenu ? "md:me-40" : "me-0"
         }`}
       >

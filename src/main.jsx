@@ -13,6 +13,9 @@ import PropertyPage, { propertyLoader } from "./pages/PropertyPage.jsx"
 import FinancialStatsPage, {
   financialStatsLoader,
 } from "./pages/FinancialStatsPage.jsx"
+import UnitLayout from "./layouts/UnitLayout.jsx"
+import OverviewPage, { overviewLoader } from "./pages/OverviewPage.jsx"
+import HydrateFallback from "./components/HydrateFallback.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,12 +28,7 @@ const router = createBrowserRouter(
           path="financial"
           element={<FinancialStatsPage />}
           loader={financialStatsLoader}
-          hydrateFallbackElement={
-            <div className="w-full h-[100vh] flex justify-center items-center">
-              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-900"></div>
-              <h1 className="ms-1 text-2xl">Loading Data...</h1>
-            </div>
-          }
+          hydrateFallbackElement={<HydrateFallback />}
         />
       </Route>
       <Route path="portfolio">
@@ -39,13 +37,25 @@ const router = createBrowserRouter(
           path="properties"
           loader={propertyLoader}
           element={<PropertyPage />}
-          hydrateFallbackElement={
-            <div className="w-full h-[100vh] flex justify-center items-center">
-              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-900"></div>
-              <h1 className="ms-1 text-2xl">Loading Data...</h1>
-            </div>
-          }
+          hydrateFallbackElement={<HydrateFallback />}
         />
+        <Route path="units" element={<UnitLayout />}>
+          <Route index element={<Navigate to="overview" />} />
+          <Route
+            path="overview"
+            element={<OverviewPage />}
+            loader={overviewLoader}
+            hydrateFallbackElement={<HydrateFallback />}
+          />
+          <Route
+            path="*"
+            element={
+              <div className="h-[50%] flex justify-center items-center">
+                <h1 className="text-2xl">404 - Not Found</h1>
+              </div>
+            }
+          />
+        </Route>
       </Route>
       <Route
         path="*"

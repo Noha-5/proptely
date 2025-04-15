@@ -1,0 +1,274 @@
+{
+  "transactionsSummary": [
+    {
+      "name": "Billed",
+      "value": "$ 20876394"
+    },
+    {
+      "name": "Paid",
+      "value": "$ 598720918"
+    },
+    {
+      "name": "Unpaid",
+      "value": "$ 20876394"
+    }
+  ],
+  "transactions": [
+    {
+      "name": "Jan",
+      "unpaid": 150000,
+      "paid": 100000
+    },
+    {
+      "name": "Feb",
+      "unpaid": 200000,
+      "paid": 500000
+    },
+    {
+      "name": "Mar",
+      "unpaid": 130098,
+      "paid": 400089
+    },
+    {
+      "name": "Apr",
+      "unpaid": 342000,
+      "paid": 522008
+    },
+    {
+      "name": "May",
+      "unpaid": 300200,
+      "paid": 210000
+    },
+    {
+      "name": "June",
+      "unpaid": 385800,
+      "paid": 210000
+    },
+    {
+      "name": "July",
+      "unpaid": 120200,
+      "paid": 210000
+    },
+    {
+      "name": "Aug",
+      "unpaid": 140200,
+      "paid": 300000
+    },
+    {
+      "name": "Sept",
+      "unpaid": 342000,
+      "paid": 322008
+    },
+    {
+      "name": "Oct",
+      "unpaid": 300200,
+      "paid": 210000
+    },
+    {
+      "name": "Nov",
+      "unpaid": 200000,
+      "paid": 500000
+    },
+    {
+      "name": "Dec",
+      "unpaid": 300200,
+      "paid": 210000
+    }
+  ],
+  "rentDetails": [
+    { "name": "Rent Type", "value": "0.0" },
+    { "name": "Security Deposit", "value": "0.0" },
+    { "name": "Market Value", "value": "0.0" },
+    { "name": "Threshold Value", "value": "0.0" },
+    { "name": "Rent Per Square Foot", "value": "0.0" },
+    { "name": "Actual Rent Value", "value": "0.0" }
+  ],
+  "LeaseHistory": [
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2024",
+      "endDate": "09-12-2025",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2023",
+      "endDate": "09-12-2024",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2022",
+      "endDate": "09-12-2023",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2021",
+      "endDate": "09-12-2022",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2020",
+      "endDate": "09-12-2021",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2019",
+      "endDate": "09-12-2020",
+      "rent": "20,000.00"
+    },
+    {
+      "name": "John Thomas",
+      "status": "Active",
+      "startDate": "10-12-2018",
+      "endDate": "09-12-2019",
+      "rent": "20,000.00"
+    }
+  ],
+  "tenantCommission": [
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2024",
+      "status": "Paid",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2023",
+      "status": "Unpaid",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2022",
+      "status": "Hold",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2021",
+      "status": "Bad Debt",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2020",
+      "status": "Overdue",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2019",
+      "status": "Paid",
+      "amount2": "20,000.00"
+    },
+    {
+      "description": "John Thomas",
+      "amount1": "5000",
+      "invoiceDate": "10-12-2018",
+      "status": "Unpaid",
+      "amount2": "20,000.00"
+    }
+  ],
+  "incomeData": [
+    {
+      "name": "Jan",
+      "value": 2000
+    },
+    {
+      "name": "Feb",
+      "value": 2500
+    },
+    {
+      "name": "Mar",
+      "value": 2500
+    },
+    {
+      "name": "Apr",
+      "value": 1500
+    },
+    {
+      "name": "May",
+      "value": 2290
+    },
+    {
+      "name": "June",
+      "value": 1590
+    },
+    {
+      "name": "July",
+      "value": 2090
+    },
+    {
+      "name": "Aug",
+      "value": 1990
+    },
+    {
+      "name": "Sept",
+      "value": 3490
+    }
+  ],
+  "expenseData": [
+    {
+      "name": "Jan",
+      "value": 4000
+    },
+    {
+      "name": "Feb",
+      "value": 2900
+    },
+    {
+      "name": "Mar",
+      "value": 3500
+    },
+    {
+      "name": "Apr",
+      "value": 3300
+    },
+    {
+      "name": "May",
+      "value": 1590
+    },
+    {
+      "name": "June",
+      "value": 2990
+    },
+    {
+      "name": "July",
+      "value": 2090
+    },
+    {
+      "name": "Aug",
+      "value": 2290
+    },
+    {
+      "name": "Sept",
+      "value": 1490
+    }
+  ],
+  "financialSnapshotSummary": [
+    {
+      "name": "Income",
+      "value": "$ 20876394"
+    },
+    {
+      "name": "Expense",
+      "value": "$ 598720918"
+    }
+  ]
+}
