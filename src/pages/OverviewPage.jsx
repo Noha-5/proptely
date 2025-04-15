@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/stats/units/header"
+import Header from "../components/stats/units/Header"
 import StackedBarChart from "../components/stats/StackedBarChart"
 import Table from "../components/Table"
 // icons
