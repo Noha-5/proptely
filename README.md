@@ -23,6 +23,7 @@ Proptely is a modern web application designed to manage and showcase properties 
 - **Tailwind CSS**: For styling and responsive design.
 - **React-Paginate**: For implementing efficient pagination functionality.
 - **React Router**: For implementing routing.
+- **recharts**: For implementing chart and graphs.
 
 ## Installation
 
@@ -50,21 +51,24 @@ Proptely is a modern web application designed to manage and showcase properties 
 ### Project Directory Structure
 
 ```bash
-   proptely/
-   ├── public/
-   │   ├── assets/
-   │   │   ├── css/
-   │   │   └── images/
-   │   │       ├── header/
-   │   │       ├── icons/
-   │   │       └── nav/
-   │   └── data/
-   └── src/
-      ├── components/
-      │   ├── header/
-      │   └── nav/
-      ├── layouts/
-      └── pages/
+   public
+│   ├───assets
+│   │   ├───css
+│   │   └───images
+│   │       ├───header
+│   │       ├───icons
+│   │       ├───nav
+│   │       ├───stats
+│   │       └───units
+│   └───data
+└───src
+    ├───components
+    │   ├───header
+    │   ├───nav
+    │   └───stats
+    │       └───units
+    ├───layouts
+    └───pages
 ```
 
 ![Project directory structure image](image.png)
