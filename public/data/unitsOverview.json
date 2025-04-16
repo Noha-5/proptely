@@ -76,7 +76,6 @@
     }
   ],
   "rentDetails": [
-    { "name": "Rent Type", "value": "0.0" },
     { "name": "Security Deposit", "value": "0.0" },
     { "name": "Market Value", "value": "0.0" },
     { "name": "Threshold Value", "value": "0.0" },
@@ -270,5 +269,71 @@
       "name": "Expense",
       "value": "$ 598720918"
     }
+  ],
+  "occupancyStats": [
+    { "name": "Group A", "value": 420 },
+    { "name": "Group B", "value": 350 },
+    { "name": "Group C", "value": 350 },
+    { "name": "Group D", "value": 200 }
+  ],
+  "occupancyStatsTotal": "75%",
+  "facilityStats": [
+    {
+      "name": "Plumbing",
+      "value": 2000,
+      "fill": "#63DFD4"
+    },
+    {
+      "name": "Electrical",
+      "value": 4000,
+      "fill": "#017BC6"
+    },
+    {
+      "name": "Joinery",
+      "value": 3000,
+      "fill": "#1D90D8"
+    }
+  ],
+
+  "commissionSnapshot": [
+    {
+      "name": "Company",
+      "value": 50,
+      "bg": 60
+    },
+    {
+      "name": "Agent 1",
+      "value": 90,
+      "bg": 10
+    },
+    {
+      "name": "Agent 2",
+      "value": 60,
+      "bg": 30
+    }
+  ],
+  "unitInfo": [
+    { "name": "Owner", "value": "Manohar Lahori, Karen Foz, seen wade" },
+    { "name": "Property", "value": "My Propety" },
+    { "name": "Unit Tags", "value": "" },
+    { "name": "Unit Size", "value": "N/A" },
+    { "name": "Assigned to", "value": "" },
+    { "name": "Unit No", "value": "2" },
+    { "name": "Unit Type", "value": "Hotel" },
+    { "name": "Unit Category", "value": "Commercial" },
+    { "name": "Status", "value": "Vacant" },
+    { "name": "Off Plan", "value": "No" },
+    { "name": "Furnished", "value": "Unfurnished" },
+    { "name": "Smoking", "value": "Smoking Not Allowed" },
+    { "name": "For Sale", "value": "No" },
+    { "name": "Unit Code", "value": "propCOM2" },
+    { "name": "Electricity No", "value": "N/A" },
+    { "name": "Gas No", "value": "N/A" },
+    { "name": "Under Renovation", "value": "False" },
+    { "name": "Under Dispute", "value": "No" },
+    { "name": "1 Bed", "value": "False" },
+    { "name": "Not Available", "value": "No" },
+    { "name": "Service Charges Per Square Foot", "value": "AED 0.0" },
+    { "name": "Total Service Charges", "value": "AED 0.0" }
   ]
 }
